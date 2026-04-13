@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gfs-backup-pruner"
+version = "0.1.0"
+description = "Prune backup files using a Grandfather-Father-Son retention policy"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+authors = [
+    { name = "Aslam Ahamed", email = "aslamahamed47@gmail.com" },
+]
+keywords = ["backup", "retention", "gfs", "devops", "disaster-recovery", "cli"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: System :: Archiving :: Backup",
+    "Topic :: System :: Systems Administration",
+]
+
+[project.urls]
+Homepage = "https://github.com/intruderfr/gfs-backup-pruner"
+Issues = "https://github.com/intruderfr/gfs-backup-pruner/issues"
+
+[project.scripts]
+gfs-backup-pruner = "gfs_backup_pruner:main"
+
+[tool.setuptools]
+py-modules = ["gfs_backup_pruner"]
